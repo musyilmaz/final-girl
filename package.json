@@ -8,6 +8,12 @@
   "author": "musyilmaz (musyilmaz.dev)",
   "license": "ISC",
   "scripts": {
-    "frontend": "pnpm --filter @final_girl/frontend"
+    "frontend": "pnpm --filter @final_girl/frontend",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
+    "husky": "^8.0.0"
   }
 }
