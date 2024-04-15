@@ -1,0 +1,13 @@
+{
+  "name": "final_girl",
+  "description": "web based implementation of final girl boardgame",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "musyilmaz (musyilmaz.dev)",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

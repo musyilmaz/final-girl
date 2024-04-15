@@ -1,0 +1,10 @@
+# env files
+.env.local
+
+node_modules
+
+# test coverage
+coverage
+*.lcov
+
+.DS_Store
