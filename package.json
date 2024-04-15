@@ -8,6 +8,6 @@
   "author": "musyilmaz (musyilmaz.dev)",
   "license": "ISC",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "frontend": "pnpm --filter @final_girl/frontend"
   }
 }
