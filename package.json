@@ -8,6 +8,7 @@
   "author": "musyilmaz (musyilmaz.dev)",
   "license": "ISC",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "frontend": "pnpm --filter @final_girl/frontend",
     "prepare": "husky install"
   },
