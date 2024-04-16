@@ -1,7 +1,0 @@
-# ignore artifacts
-build
-coverage
-
-# ignore specific json files
-tsconfig.json
-tsconfig.node.json
