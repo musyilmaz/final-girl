@@ -12,6 +12,7 @@
     "format:fix": "prettier --write \"**/*.+(js|ts|json|)\""
   },
   "dependencies": {
+    "@final_girl/ui": "workspace:*",
     "@tanstack/react-router": "^1.28.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
