@@ -8,7 +8,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "format": "prettier \"**/*.+(js|ts|json|)\""
+    "format": "prettier \"**/*.+(js|ts|json|)\"",
+    "format:fix": "prettier --write \"**/*.+(js|ts|json|)\""
   },
   "dependencies": {
     "@tanstack/react-router": "^1.28.1",
