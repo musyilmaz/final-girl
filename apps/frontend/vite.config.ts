@@ -12,6 +12,10 @@ export default defineConfig({
         find: "@ui",
         replacement: path.resolve(__dirname, "../../packages/ui/src"),
       },
+      {
+        find: "@",
+        replacement: path.resolve(__dirname, "./src"),
+      },
     ],
   },
 });
