@@ -16,21 +16,35 @@ import { Route as rootRoute } from './routes/__root'
 
 // Create Virtual Routes
 
-const IndexLazyImport = createFileRoute('/')()
+const lobbyIndexLazyImport = createFileRoute('/(lobby)/')()
+const lobbyLoadLazyImport = createFileRoute('/(lobby)/load')()
 
 // Create/Update Routes
 
-const IndexLazyRoute = IndexLazyImport.update({
-  path: '/',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+const lobbyIndexLazyRoute = lobbyIndexLazyImport
+  .update({
+    path: '/',
+    getParentRoute: () => rootRoute,
+  } as any)
+  .lazy(() => import('./routes/(lobby)/index.lazy').then((d) => d.Route))
+
+const lobbyLoadLazyRoute = lobbyLoadLazyImport
+  .update({
+    path: '/load',
+    getParentRoute: () => rootRoute,
+  } as any)
+  .lazy(() => import('./routes/(lobby)/load.lazy').then((d) => d.Route))
 
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      preLoaderRoute: typeof IndexLazyImport
+    '/(lobby)/load': {
+      preLoaderRoute: typeof lobbyLoadLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/(lobby)/': {
+      preLoaderRoute: typeof lobbyIndexLazyImport
       parentRoute: typeof rootRoute
     }
   }
@@ -38,6 +52,9 @@ declare module '@tanstack/react-router' {
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren([IndexLazyRoute])
+export const routeTree = rootRoute.addChildren([
+  lobbyLoadLazyRoute,
+  lobbyIndexLazyRoute,
+])
 
 /* prettier-ignore-end */

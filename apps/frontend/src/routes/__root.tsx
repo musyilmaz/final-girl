@@ -1,4 +1,4 @@
-import { useThemeStore } from "@/store/theme.store";
+import { useThemeStore } from "@/store/theme/theme.store";
 import { Outlet, createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 

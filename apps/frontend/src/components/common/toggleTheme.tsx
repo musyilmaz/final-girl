@@ -1,4 +1,4 @@
-import { Theme, useThemeStore } from "@/store/theme.store";
+import { Theme, useThemeStore } from "@/store/theme/theme.store";
 import { Button, DynamicIcon } from "@ui/components";
 
 export const ToggleTheme = () => {
