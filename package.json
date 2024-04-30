@@ -10,6 +10,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "frontend": "pnpm --filter @final_girl/frontend",
+    "ui": "pnpm --filter @final_girl/ui",
+    "lib": "pnpm --filter @final_girl/lib",
     "ui:add": "pnpm --filter @final_girl/ui ui:add",
     "prepare": "husky install"
   },
